@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.rebrandloser.anisofix.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SamplerCacheMixin",
+    "TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

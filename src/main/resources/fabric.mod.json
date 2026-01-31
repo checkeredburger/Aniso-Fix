@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "anisofix",
+  "version": "${version}",
+  "name": "AnisoFix",
+  "description": "Dynamic VRAM management for Minecraft Prevent crashes by auto-scaling Anisotropic Filtering in real time.",
+  "authors": [],
+  "contact": {},
+  "license": "Apache-2.0",
+  "icon": "assets/anisofix/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.rebrandloser.anisofix.client.AnisofixDataGenerator"
+    ],
+    "client": [
+      "com.rebrandloser.anisofix.client.AnisofixClient"
+    ],
+    "modmenu": [
+      "com.rebrandloser.anisofix.client.config.ModMenuIntegration"
+    ],
+    "main": [
+      "com.rebrandloser.anisofix.Anisofix"
+    ]
+  },
+  "mixins": [
+    "anisofix.mixins.json",
+    {
+      "config": "anisofix.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
