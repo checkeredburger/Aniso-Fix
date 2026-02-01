@@ -4,6 +4,8 @@
 
 [![View on GitHub](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/github_64h.png)](https://github.com/checkeredburger/Aniso-Fix)
 
+[![Available on Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_64h.png)](https://modrinth.com/mod/aniso-fix)
+
 Minecraft's updated texture engine can be a VRAM hog. Aniso Fix fixes that. It monitors your virtual memory and, if your VRAM exceeds a specified limit, it instantly drops your Anisotropic Filtering to 1x.
 
 Smart Scaling: Clamps AF when VRAM is full; restores it when safe.
