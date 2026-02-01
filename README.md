@@ -13,3 +13,9 @@ Zero Interruptions: Updates samplers directly without a resource reload.
 VRAM HUD: Keep an eye on your GPU with a customizable HUD.
 
 Fully Configurable: Set your own "Panic" and "Recovery" percentages via Mod Menu.
+
+**DEPENDENCIES**:
+
+[![Cloth Config](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/cloth-config-api_64h.png)](https://modrinth.com/mod/cloth-config/version/21.11.153+fabric) [![Fabric API](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/fabric-api_64h.png)](https://modrinth.com/mod/fabric-api/version/0.141.2+1.21.11) [![Mod Menu](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/mod-menu_64h.png)](https://modrinth.com/mod/modmenu/version/17.0.0-beta.2)
+
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/aniso-fix?color=FF00FF&label=Downloads&style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/aniso-fix) [![GitHub Stars](https://img.shields.io/github/stars/checkeredburger/Aniso-Fix?color=FF00FF&label=Stars&style=for-the-badge&logo=github)](https://github.com/checkeredburger/Aniso-Fix/stargazers)
