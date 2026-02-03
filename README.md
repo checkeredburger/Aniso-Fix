@@ -34,8 +34,10 @@ Aniso Fix requires the following mods to be installed:
 
 ---
 
-### Stats
-
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/aniso-fix?color=FF00FF&label=Downloads&style=for-the-badge&logo=modrinth)
-![Modrinth Followers](https://img.shields.io/modrinth/followers/aniso-fix?color=FF00FF&label=Followers&style=for-the-badge&logo=modrinth)
-![GitHub Stars](https://img.shields.io/github/stars/checkeredburger/Aniso-Fix?color=FF00FF&label=Stars&style=for-the-badge&logo=github)
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/checkeredburger/Aniso-Fix?color=211f1f&label=Release&style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/github/actions/workflow/status/checkeredburger/Aniso-Fix/build.yml?color=211f1f&label=Build&style=for-the-badge&logo=githubactions" />
+  <img src="https://img.shields.io/modrinth/dt/aniso-fix?color=00af5c&label=Downloads&style=for-the-badge&logo=modrinth" />
+  <img src="https://img.shields.io/modrinth/followers/aniso-fix?color=00af5c&label=Followers&style=for-the-badge&logo=modrinth" />
+  <img src="https://img.shields.io/github/stars/checkeredburger/Aniso-Fix?color=fab005&label=Stars&style=for-the-badge&logo=github" />
+</p>
