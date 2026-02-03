@@ -1,31 +1,41 @@
-![Aniso Fix](https://cdn.modrinth.com/data/cached_images/429cca803342db7999a453685266dabfb43ef99e.png)
+<p align="center">
+  <img src="https://cdn.modrinth.com/data/cached_images/429cca803342db7999a453685266dabfb43ef99e.png" alt="Aniso Fix Logo" width="600">
+</p>
 
-**AVAILABILITY**
+---
 
-[![Available for Fabric](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/fabric_64h.png)](https://modrinth.com/mod/aniso-fix/version/1.97)
+**Automated VRAM management for modern Minecraft.**
 
+Minecraft's updated texture engine can be a significant VRAM hog. Aniso Fix addresses this by monitoring your virtual memory in real-time. If your VRAM usage exceeds a user-defined limit, the mod instantly drops your Anisotropic Filtering (AF) to 1x to maintain stability.
+
+---
+
+### Features
+
+* **Smart Scaling:** Automatically clamps AF when VRAM is critically full and restores it once memory levels return to a safe threshold.
+* **Zero Interruptions:** Settings are applied by updating samplers directly. This ensures no resource reloads, stuttering, or loading screens during the transition.
+* **VRAM HUD:** Includes a customizable in-game overlay to monitor your GPU usage and memory pressure in real-time.
+* **Fully Configurable:** Fine-tune your "Panic" and "Recovery" percentages via Mod Menu to suit your hardware.
+
+---
+
+### Availability
+
+[![Available for Fabric](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/fabric_64h.png)](https://modrinth.com/mod/aniso-fix)
 [![View on GitHub](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/github_64h.png)](https://github.com/checkeredburger/Aniso-Fix)
-
 [![Available on Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_64h.png)](https://modrinth.com/mod/aniso-fix)
+---
 
-**ABOUT**
+### Dependencies
 
-Minecraft's updated texture engine can be a VRAM hog. Aniso Fix fixes that. It monitors your virtual memory and, if your VRAM exceeds a specified limit, it instantly drops your Anisotropic Filtering to 1x.
+Aniso Fix requires the following mods to be installed:
 
-Smart Scaling: Clamps AF when VRAM is full; restores it when safe.
+[![Cloth Config](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/cloth-config-api_64h.png)](https://modrinth.com/mod/cloth-config) [![Fabric API](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/fabric-api_64h.png)](https://modrinth.com/mod/fabric-api) [![Mod Menu](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/mod-menu_64h.png)](https://modrinth.com/mod/modmenu)
 
-Zero Interruptions: Updates samplers directly without a resource reload.
+---
 
-VRAM HUD: Keep an eye on your GPU with a customizable HUD.
+### Stats
 
-Fully Configurable: Set your own "Panic" and "Recovery" percentages via Mod Menu.
-
-**DEPENDENCIES**:
-
-[![Cloth Config](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/cloth-config-api_64h.png)](https://modrinth.com/mod/cloth-config/version/21.11.153+fabric) [![Fabric API](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/fabric-api_64h.png)](https://modrinth.com/mod/fabric-api/version/0.141.2+1.21.11) [![Mod Menu](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/requires/mod-menu_64h.png)](https://modrinth.com/mod/modmenu/version/17.0.0-beta.2)
-
-**STATS**
-
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/aniso-fix?color=FF00FF&label=Downloads&style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/aniso-fix)
-[![Modrinth Followers](https://img.shields.io/modrinth/followers/aniso-fix?color=FF00FF&label=Followers&style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/aniso-fix)
-[![GitHub Stars](https://img.shields.io/github/stars/checkeredburger/Aniso-Fix?color=FF00FF&label=Stars&style=for-the-badge&logo=github)](https://github.com/checkeredburger/Aniso-Fix/stargazers)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/aniso-fix?color=FF00FF&label=Downloads&style=for-the-badge&logo=modrinth)
+![Modrinth Followers](https://img.shields.io/modrinth/followers/aniso-fix?color=FF00FF&label=Followers&style=for-the-badge&logo=modrinth)
+![GitHub Stars](https://img.shields.io/github/stars/checkeredburger/Aniso-Fix?color=FF00FF&label=Stars&style=for-the-badge&logo=github)
