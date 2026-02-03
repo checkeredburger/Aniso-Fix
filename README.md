@@ -21,7 +21,7 @@ Minecraft's updated texture engine can be a significant VRAM hog. Aniso Fix addr
 
 ### Availability
 
-[![Available for Fabric](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/fabric_64h.png)](https://modrinth.com/mod/aniso-fix)
+[![Available for Fabric](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/fabric_64h.png)](https://modrinth.com/mod/aniso-fix/version/0.0.4)
 [![View on GitHub](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/github_64h.png)](https://github.com/checkeredburger/Aniso-Fix)
 [![Available on Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/available/modrinth_64h.png)](https://modrinth.com/mod/aniso-fix)
 ---
