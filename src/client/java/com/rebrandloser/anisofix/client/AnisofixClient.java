@@ -11,6 +11,8 @@ import net.minecraft.util.Formatting;
 
 public class AnisofixClient implements ClientModInitializer {
     public static boolean panicMode = false;
+    public static Integer originalMipmapLevel = null;
+    public static int mipmapPanicLevelTemp = 0;
     private int tickCounter = 0;
 
     @Override
@@ -38,8 +40,14 @@ public class AnisofixClient implements ClientModInitializer {
                     if (config.enableNotifications) {
                         client.inGameHud.getChatHud().addMessage(
                             Text.literal("[AnisoFix] ").formatted(Formatting.RED)
-                                .append(Text.literal("VRAM Low! Entering Panic Mode (Anisotropy Disabled)").formatted(Formatting.YELLOW))
+                                .append(Text.literal("VRAM Low! Entering Panic Mode (Anisotropy Disabled").append(config.dynamicMipmapScaling ? " & Mipmaps Reduced" : "").append(")").formatted(Formatting.YELLOW))
                         );
+                    }
+                    if (config.dynamicMipmapScaling) {
+                        originalMipmapLevel = client.options.getMipmapLevels().getValue();
+                        mipmapPanicLevelTemp = config.mipmapPanicLevel;
+                        client.options.getMipmapLevels().setValue(config.mipmapPanicLevel);
+                        client.reloadResources();
                     }
                 } else if (panicMode && usedMb < config.recoveryThreshold) {
                     panicMode = false;
@@ -48,6 +56,12 @@ public class AnisofixClient implements ClientModInitializer {
                             Text.literal("[AnisoFix] ").formatted(Formatting.GREEN)
                                 .append(Text.literal("VRAM Recovered. Exiting Panic Mode.").formatted(Formatting.WHITE))
                         );
+                    }
+                    if (config.dynamicMipmapScaling && originalMipmapLevel != null) {
+                        client.options.getMipmapLevels().setValue(originalMipmapLevel);
+                        client.reloadResources();
+                        originalMipmapLevel = null;
+                        mipmapPanicLevelTemp = 0;
                     }
                 }
             }

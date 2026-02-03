@@ -3,18 +3,17 @@ name: Java CI with Gradle
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags: [ "v*" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-
+      contents: write
+    
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
@@ -28,8 +27,12 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
 
-    - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4
+    - name: Create GitHub Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v2
       with:
-        name: AnisoFix-Build
-        path: build/libs/*.jar
+        name: Aniso Fix ${{ github.ref_name }}
+        files: build/libs/*.jar
+        body_path: CHANGELOG.md
+        draft: false
+        prerelease: false

@@ -20,6 +20,12 @@ public class AnisofixConfig {
     public boolean showCpuName = true;
     public boolean showVram = true;
     
+    public boolean showAFLevel = true;
+    public boolean showMipmapLevel = true;
+    
+    public boolean dynamicMipmapScaling = false;
+    public int mipmapPanicLevel = 0;
+    
     public int hudX = 2;
     public int hudY = 2;
     public HudAnchor hudAnchor = HudAnchor.TOP_RIGHT;

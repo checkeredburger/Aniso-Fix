@@ -4,6 +4,7 @@ import com.rebrandloser.anisofix.client.AnisofixClient;
 import com.rebrandloser.anisofix.client.config.AnisofixConfig;
 import com.rebrandloser.anisofix.client.monitor.HardwareMonitor;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import com.rebrandloser.anisofix.client.GameOptionsAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
@@ -36,6 +37,16 @@ public class HardwareHud implements HudRenderCallback {
                 long used = total - free;
                 lines.add(String.format("VRAM: %d / %d MB %s", used / 1024 / 1024, total / 1024 / 1024, AnisofixClient.panicMode ? "(PANIC)" : ""));
             }
+        }
+        
+        if (config.showAFLevel) {
+            String afStatus = AnisofixClient.panicMode ? "1x (PANIC)" : "Not Available";
+            lines.add(String.format("AF: %s", afStatus));
+        }
+
+        if (config.showMipmapLevel) {
+            int mipmapLevel = client.options.getMipmapLevels().getValue();
+            lines.add(String.format("Mipmap: %d", mipmapLevel));
         }
 
         if (lines.isEmpty()) return;

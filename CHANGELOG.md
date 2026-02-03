@@ -1,15 +1,18 @@
-# Aniso Fix 0.0.4
+# Changelog
 
-## Changes
-- **Config UI Rewrite:** Grouped everything into "General" and "HUD" tabs. It’s much less cluttered now. Also added tooltips for the settings that weren't self-explanatory.
-- **HUD Placement:** You can finally move the Hardware HUD. 
-    - Added anchors for all four corners.
-    - Added X/Y offset sliders for pixel-perfect positioning.
-- **Panic Mode Toggle:** Added chat-based notifications for when Panic Mode kicks in or shuts off. Use this if you want to know exactly when the mod is downscaling Anisotropic Filtering. (Can be toggled in config).
+## Aniso Fix 0.0.5-BETA
 
-## Performance & Internal Logic
-- **Reduced Polling Rate:** Changed VRAM monitoring to check once per second (20 ticks) rather than every single frame. This cuts down on unnecessary CPU usage.
-- **Stabilized Thresholds:** Tweaked the "Panic" logic to prevent it from flickering on and off when memory usage is right on the line.
+### Changes
 
-## Versioning
-- **Version Change:** Updated versioning scheme.
+#### Dynamic Mipmap Scaling (VRAM Saver)
+- Introduced a new feature to dynamically adjust mipmap levels to save VRAM when usage exceeds a defined panic threshold.
+- New configuration options: `dynamicMipmapScaling` and `mipmapPanicLevel` have been added.
+- ModMenu integration for the new mipmap scaling options is now available.
+- When entering panic mode with dynamic mipmap scaling enabled, the game's mipmap level is automatically set to the configured `mipmapPanicLevel`, and resources are reloaded.
+- Upon VRAM recovery, the original mipmap level is restored, and resources are reloaded.
+- Panic notification messages have been updated to include information about mipmap reduction.
+
+#### HUD Improvements
+- **AF Level Display**: A HUD element has been added to indicate the Anisotropic Filtering status. Due to technical limitations in accessing the exact in-game AF level for Minecraft 1.21.11, it will show "1x (PANIC)" when VRAM panic mode is active and "Not Available" otherwise.
+- **Mipmap Level Display**: A new HUD element has been added to show the current Mipmap level.
+- **Configurable Visibility**: New options `showAFLevel` and `showMipmapLevel` have been added to the config and ModMenu to toggle the visibility of these HUD elements.
