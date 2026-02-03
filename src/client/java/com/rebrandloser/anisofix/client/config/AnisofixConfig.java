@@ -19,6 +19,16 @@ public class AnisofixConfig {
     public boolean showGpuVendor = false;
     public boolean showCpuName = true;
     public boolean showVram = true;
+    
+    public int hudX = 2;
+    public int hudY = 2;
+    public HudAnchor hudAnchor = HudAnchor.TOP_RIGHT;
+    
+    public boolean enableNotifications = true;
+
+    public enum HudAnchor {
+        TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+    }
 
     public static AnisofixConfig getInstance() {
         if (instance == null) {

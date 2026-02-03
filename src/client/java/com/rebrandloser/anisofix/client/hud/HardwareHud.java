@@ -41,13 +41,31 @@ public class HardwareHud implements HudRenderCallback {
         if (lines.isEmpty()) return;
 
         int width = client.getWindow().getScaledWidth();
-        int y = 2;
+        int height = client.getWindow().getScaledHeight();
         int color = AnisofixClient.panicMode ? 0xFFFF5555 : 0xFFFFFFFF;
+        
+        int startY;
+        int lineHeight = 10;
+        int totalHeight = lines.size() * lineHeight;
 
-        for (String line : lines) {
+        if (config.hudAnchor == AnisofixConfig.HudAnchor.TOP_LEFT || config.hudAnchor == AnisofixConfig.HudAnchor.TOP_RIGHT) {
+            startY = config.hudY;
+        } else {
+            startY = height - totalHeight - config.hudY;
+        }
+
+        for (int i = 0; i < lines.size(); i++) {
+            String line = lines.get(i);
             int textWidth = client.textRenderer.getWidth(line);
-            context.drawTextWithShadow(client.textRenderer, line, width - textWidth - 2, y, color);
-            y += 10;
+            int x;
+
+            if (config.hudAnchor == AnisofixConfig.HudAnchor.TOP_LEFT || config.hudAnchor == AnisofixConfig.HudAnchor.BOTTOM_LEFT) {
+                x = config.hudX;
+            } else {
+                x = width - textWidth - config.hudX;
+            }
+
+            context.drawTextWithShadow(client.textRenderer, line, x, startY + (i * lineHeight), color);
         }
     }
 }
