@@ -1,7 +1,7 @@
 package com.rebrandloser.anisofix.mixin.client;
 
 import com.rebrandloser.anisofix.client.AnisofixClient;
-import com.rebrandloser.anisofix.client.GameOptionsAccessor; // Added import
+import com.rebrandloser.anisofix.client.GameOptionsAccessor;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.option.SimpleOption;
 import org.spongepowered.asm.mixin.Mixin;
@@ -24,7 +24,6 @@ public abstract class GameOptionsMixin {
     @Inject(method = "write", at = @At("RETURN"))
     private void onWriteReturn(CallbackInfo ci) {
         if (AnisofixClient.panicMode && AnisofixClient.originalMipmapLevel != null) {
-            // Restore the panic level after saving, so the game continues to use 0 during this session
             this.getMipmapLevels().setValue(AnisofixClient.mipmapPanicLevelTemp);
         }
     }
