@@ -1,0 +1,50 @@
+{
+  "anisofix.config.title": "AnisoFix Configuration",
+  "anisofix.category.performance": "Performance Settings",
+  "anisofix.category.hud": "HUD Settings",
+  
+  "anisofix.config.panic_threshold": "Panic Threshold (MB)",
+  "anisofix.config.panic_threshold.tooltip": "Free VRAM amount (in MB) at which Panic Mode activates.",
+  
+  "anisofix.config.recovery_threshold": "Recovery Threshold (MB)",
+  "anisofix.config.recovery_threshold.tooltip": "Free VRAM amount (in MB) at which Panic Mode deactivates.",
+  
+  "anisofix.config.enable_notifications": "Enable Notifications",
+  "anisofix.config.enable_notifications.tooltip": "Show a chat message when entering/exiting Panic Mode.",
+  
+  "anisofix.config.dynamic_mipmap_scaling": "Dynamic Mipmap Scaling",
+  "anisofix.config.dynamic_mipmap_scaling.tooltip": "When in Panic Mode, also reduce mipmap levels to save VRAM.",
+  
+  "anisofix.config.mipmap_panic_level": "Mipmap Panic Level",
+  "anisofix.config.mipmap_panic_level.tooltip": "The mipmap level to use during Panic Mode (0 = disabled).",
+  
+  "anisofix.config.show_hud": "Enable HUD",
+  "anisofix.config.show_hud.tooltip": "Toggle the visibility of the Hardware HUD.",
+  
+  "anisofix.config.show_gpu_name": "Show GPU Name",
+  "anisofix.config.show_gpu_name.tooltip": "Display the name of your GPU in the HUD.",
+  
+  "anisofix.config.show_gpu_vendor": "Show GPU Vendor",
+  "anisofix.config.show_gpu_vendor.tooltip": "Display the vendor of your GPU in the HUD (e.g., NVIDIA, AMD).",
+  
+  "anisofix.config.show_cpu_name": "Show CPU Name",
+  "anisofix.config.show_cpu_name.tooltip": "Display the name of your CPU in the HUD.",
+  
+  "anisofix.config.show_vram": "Show VRAM Usage",
+  "anisofix.config.show_vram.tooltip": "Display current VRAM usage and total VRAM in the HUD.",
+  
+  "anisofix.config.show_af_level": "Show AF Level",
+  "anisofix.config.show_af_level.tooltip": "Displays the Anisotropic Filtering level in the HUD.",
+  
+  "anisofix.config.show_mipmap_level": "Show Mipmap Level",
+  "anisofix.config.show_mipmap_level.tooltip": "Displays the current Mipmap level in the HUD.",
+  
+  "anisofix.config.anchor_point": "Anchor Point",
+  "anisofix.config.anchor_point.tooltip": "Sets the corner of the screen where the HUD will be displayed.",
+  
+  "anisofix.config.x_offset": "X Offset",
+  "anisofix.config.x_offset.tooltip": "Adjusts the horizontal position of the HUD from the anchor point.",
+  
+  "anisofix.config.y_offset": "Y Offset",
+  "anisofix.config.y_offset.tooltip": "Adjusts the vertical position of the HUD from the anchor point."
+}

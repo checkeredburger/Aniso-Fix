@@ -40,7 +40,8 @@ public class HardwareHud implements HudRenderCallback {
         }
         
         if (config.showAFLevel) {
-            String afStatus = AnisofixClient.panicMode ? "1x (PANIC)" : "Not Available";
+            float currentAF = com.rebrandloser.anisofix.client.RealTimeTextureManager.getCurrentAnisotropy();
+            String afStatus = AnisofixClient.panicMode ? "1x (PANIC)" : String.format("%.0fx", currentAF);
             lines.add(String.format("AF: %s", afStatus));
         }
 
